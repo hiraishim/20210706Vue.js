@@ -91,20 +91,20 @@ export default {
   methods: {
     CommonBtnMissionBtn(){
      console.log("ミッション詳細");
- 　 },
+    },
     CommonBtnServiceBtn(){
       console.log("サービス詳細");
     },
     CommonBtnContactBtn(){
-      cosole.log("お問い合わせ");
+      console.log("お問い合わせ");
     }
-}
+},
+};
   //byn修正
-
-components: {
+  components:{
   CommonHeader,
   CommonFooter
-},
+}
 
 
 
