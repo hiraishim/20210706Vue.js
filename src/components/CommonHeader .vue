@@ -60,7 +60,7 @@
      };
   </script>
 
-  <style scoped>
+ <style scoped>
   #hamburger {
    display: none;
 }
@@ -167,6 +167,8 @@
   .menu-content.open {
     left: 0;
   }
+  
+ }
  </style>
    
       

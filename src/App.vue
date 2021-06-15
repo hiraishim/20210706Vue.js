@@ -98,18 +98,18 @@ export default {
     CommonBtnContactBtn(){
       console.log("お問い合わせ");
     }
-},
+  },
+
+   components:{
+     CommonHeader,
+     CommonFooter
+  },
 };
-  //byn修正
-  components:{
-  CommonHeader,
-  CommonFooter
-}
-
-
-
-
 </script>
+
+
+
+
   
 <style>
 html, body, div, span, object, iframe,
