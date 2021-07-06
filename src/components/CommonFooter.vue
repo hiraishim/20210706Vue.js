@@ -35,4 +35,10 @@
   color: #fff;
 }
 
+.header-nav li {
+  display: inline-block;
+  margin-right: 35px;
+  font-size: 16px;
+}
+
 </style>

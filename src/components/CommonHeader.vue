@@ -1,4 +1,5 @@
 <template>
+   
    <header id="top-header">
       <div class="flex">
         <h1 class="header-logo">estra inc.</h1>
@@ -44,10 +45,11 @@
      </nav>
   </header>
  </template>
-
+ 
+ 
   <script>
     export default{
-      date(){
+      data(){
         return{
           isClass:false
         };
@@ -61,24 +63,34 @@
   </script>
 
  <style scoped>
-  #hamburger {
-   display: none;
-}
+
 
  #top-header {
    height: 70px;
    line-height: 70px;
    background: rgba(0, 0, 0, 1);
 }
+.flex{
+    display:flex;
+  }
 
- .header-logo {
+.header-logo {
    font-size: 20px;
    font-weight: bold;
    margin-left: 35px;
    color: #fff;
    line-height: 70px;
 }
+.header {
+  height: 70px;
+  background: #000;
+}
 
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .header-nav li {
   display: inline-block;
   margin-right: 35px;
@@ -90,16 +102,26 @@
 }
 
  @media screen and (max-width: 768px) {
-  .header-nav {
-    display: none;
+    #hamburger {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 100;
+    top: 15px;
+    right: 20px;
+    transition: 0.4s;
   }
-  .catchcopy {
-    top: 50%;
-    left: 50%;
-    width: 80%;
-    text-align: center;
-    transform: translate(-50%, -50%);
+  #hamburger span {
+    position: absolute;
+    left: 2px;
+    display: block;
+    width: 35px;
+    height: 2px;
+    background-color: #fff;
+    transition: 0.8s;
   }
+ 
 
   #hamburger.active span:nth-of-type(1) {
     top: 20px;
@@ -112,42 +134,6 @@
   #hamburger.active span:nth-of-type(3) {
     top: 20px;
     transform: rotate(-45deg);
-  }
-  .menu-content {
-    display: block;
-    width: calc(100% - 80px);
-    height: 100%;
-    text-align: center;
-    transition: 0.2s;
-    position: fixed;
-    top: 0;
-    left: calc(-100% - 80px);
-    background: #fff;
-    color: #333333;
-    box-shadow: 80px 0 rgba(38, 98, 213, 0.3);
-    z-index: 999;
-  }
-  .menu-content .menu-title {
-    margin: 40px 20px;
-    font-size: 2.2rem;
-    color: #333333;
-    text-align: left;
-    font-weight: bold;
-  }
-  .menu-content li a {
-    color: #333333;
-    margin: 15px;
-    padding: 5px;
-    border-bottom: 0.5px solid #2662d5;
-    text-decoration: none;
-    display: block;
-  }
-  .menu-content li {
-    width: 100%;
-    text-align: left;
-  }
-  .menu-content.open {
-    left: 0;
   }
   
  
@@ -200,6 +186,7 @@
   .menu-content.open {
     left: 0;
   }
+  
  }
 
  </style>
